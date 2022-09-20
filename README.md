@@ -207,8 +207,6 @@ Let's build my powerful shell with those system calls.
   $
   ```
 
-- Use `__timeout` variable to read the current timeout value. Use `set_timeout()` function to set the value. DO NOT MODIFY `__timeout` variable DIRECTLY.
-
 - Hint: `sigaction(), alarm()`, and `kill()`.
 
 - Make sure `alarm` is disabled once the program exits otherwise the shell itself might be be terminated. Use `sigaction` over `signal` for code portability (Use `sigaction()` instead of `signal()`). Also, have a look at `man 7 signal` to get an extensible explanation about signal handling.
@@ -216,9 +214,9 @@ Let's build my powerful shell with those system calls.
 
 
 ### Restriction and hints
-- For your coding practice, the compiler is set to halt on some (important) warnings. Write your code to fully comply the C99 standard.
 - DO NOT USE `system()` system call. You will get 0 pts if you use it.
 - DO NOT implement external programs' features by yourself (e.g., printing out a message to handle `echo` command, listing the current directory to handle `ls` command, etc). You will not get any point in this case.
+- For your coding practice, the compiler is set to halt on some (important) warnings. Write your code to fully comply the C99 standard.
 - It is advised to test your code on your computer first and to implement incrementally. Some sample inputs are included under `testcase` directory. Try to input each line or just run `./mash < [input file]`.
 - FYI, the instructor's implementation took ~150 lines of C code. Believe me, the implementation is not difficult if you fully understand the concepts of processes.
 
@@ -226,26 +224,26 @@ Let's build my powerful shell with those system calls.
 ### Submission / Grading
 - 260 pts in total
 - Source: ***pa1.c*** (220 pts in total)
-  - You can submit up to **30** times to be tested on PASubmit.
+  - You can submit up to **30** times for testing.
   - Points will be prorated by testcase results.
 - Document: ***One PDF document*** (30 pts). It should include **ALL** the followings;
-  - Outline how programs are launched and arguments are passed
-  - How the command history is maintained and replayed later
-  - Your ***STRATEGY*** to implement the pipe
-  - AND lessons learned
+  - Outline how programs are launched and arguments are passed.
+  - Explain how the command history is maintained and replayed later.
+  - Your ***STRATEGY*** to implement the timeout feature.
+  - AND LESSONS LEARNED.
 
-  - NO MORE THAN ***FOUR*** PAGES
+  - NO MORE THAN ***THREE*** PAGES
   - DO NOT INCLUDE COVER PAGE, YOUR NAME, NOR STUDENT ID
   - COMPLY THE STATEMENTS OTHERWISE YOU WILL GET 0 pts for documentation
 - Git repository URL at git.ajou.ac.kr (10 pts)
   - To get the points, you should actually use the repository to manage your code (i.e., have more than two commits which are hours aparts). You will not get any point if you just committed your final code or the repository is not properly cloned.
-  - How to create your repository to submit:
+  - To create your repository for submission:
     - Clone this repository into your computer, create a *private* project from http://git.ajou.ac.kr, and push the local repository onto the gitlab repository.
     - Or create a *private* repository by importing the handout repository as a new project.
-  - How to submit your git repository
-    - Generate a deploy token from Settings/Repository/Deploy Token. Make sure you're working with deploy **token** not deploy **key**.
+  - To submit your git repository:
+    - Generate a **deploy token** from Settings/Repository/Deploy Token. Make sure you're working with deploy **token** not deploy **key**.
     - Register at PASubmit using the repository URL and deploy token.
     - PASubmit only accepts the repository address over HTTP. **SSH URL will be rejected**.
-  - For the slip token policy, the grading will happen after the deadline. So, the deploy token should valid through the due date + 4 days.
+  - For the slip token policy, the grading will be done after the deadline. So, the deploy token should valid through the due date + 4 days.
 - Free to make a question through AjouBb. However, **YOU MIGHT NOT GET AN ANSWER IF THE ISSUE/TOPIC IS ALREADY DISCUSSED ON THIS HANDOUT**.
-- **QUESTIONS OVER EMAIL WILL BE IGNORED unless it concerns your privacy**.
+- Questions over email will be ignored unless it concerns your privacy.
